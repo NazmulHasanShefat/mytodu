@@ -28,8 +28,7 @@
 .text {
   margin-bottom: 0;
   margin-left: 40px;
-  width: 50%;
-  flex-wrap: wrap;
+  width: 69%;
 }
 
 .my_list.checked::before {
