@@ -6,7 +6,19 @@ let list_container = document.querySelector(".list_container");
 submit_btn.addEventListener("click",()=>{
     let input_value = input_fuld.value;
     if(input_value < 1){
-         alert("please input your list name");
+        const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
+        const appendAlert = (message, type) => {
+        const wrapper = document.createElement('div')
+        wrapper.innerHTML = [
+            `<div class="alert alert-${type} alert-dismissible" role="alert">`,
+            `   <div>${message}</div>`,
+            '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+            '</div>'
+        ].join('')
+
+        alertPlaceholder.append(wrapper)
+        }
+        appendAlert('please input your list name!', 'danger')
     }
     else{
         let list = document.createElement("li");
