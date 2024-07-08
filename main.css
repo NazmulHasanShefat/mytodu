@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.my_list {
+  padding-left: 20px;
+  position: relative;
+}
+
+@media screen and (min-width: 768px) {
+  .my_list {
+    cursor: pointer;
+  }
+}
+.my_list::before {
+  position: absolute;
+  content: "";
+  width: 18px;
+  height: 18px;
+  background-image: url("./unchecked.png");
+  background-size: 100% 100%;
+  top: 12px;
+  left: 20px;
+}
+
+.text {
+  margin-bottom: 0;
+  margin-left: 40px;
+  width: 50%;
+  flex-wrap: wrap;
+}
+
+.my_list.checked::before {
+  background-image: url("./check_img.png");
+}
+
+.checked {
+  text-decoration: line-through;
+  color: rgb(190, 190, 190);
+}/*# sourceMappingURL=main.css.map */
